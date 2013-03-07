@@ -1,7 +1,15 @@
+@import url("reset.css");
 body{
 	font-family:helvetica;
 	font-size:14px; /*Change to 14px if we switch to Helvetica Neue*/
 }
+
+#banner{
+  background-image: url('../images/top_banner.jpg');
+  width: 939px;
+  height: 145px;
+}
+
 #wrapper{
 	height:640px;
 	width:935px;
@@ -23,7 +31,7 @@ h1 span{
 h3{
 	color:#FFF;
 	text-align:left;
-	font-size:18px;
+	font-size:16px;
 	text-transform:uppercase;
 	font-weight:bold;
 	letter-spacing:-0.5px;
@@ -49,6 +57,7 @@ a:hover{
 .hide{
 display:none;
 }
+
 .ribbon{
 	background-image:url('../images/buttons/06.png');
 	background-repeat:no-repeat;
@@ -71,10 +80,36 @@ display:none;
 	width:600px;
 	margin:0 auto;
 }
+
 .welcomeTextArea{
 	margin:-140px 0 0 295px;
 	text-align:left;
 }
+
+.welcomeScreen{
+	background-image:url('../images/welcome.png');
+	background-repeat:no-repeat;
+	width:729px;
+	margin:30px auto;
+	height:454px;
+}
+.welcomePerson{
+	margin: 53px 0 0 55px;
+}
+.welcomePerson:hover{
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */		
+}
+.welcomeTextArea{
+	margin:-58px 0 0 235px;
+	text-align:left;
+}
+.welcomeTextArea img:hover{
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */		
+}
+
+
 .higher{
 	margin-top:30px;
 }
@@ -82,6 +117,11 @@ display:none;
 	text-align:center;/*not in use*/
 	margin: 0 auto;/*might work. check once images are cropped to same width*/
 }
+
+.introButtons li{
+    display: inline;
+}
+
 .introButtons li a{
 	float:left;
 	margin:0 15px;
@@ -105,6 +145,9 @@ display:none;
 	margin:0;
 	padding:0;
 }
+
+
+
 .profile{
 	margin:8px 10px 8px 0;
 	text-align:right;
@@ -117,14 +160,16 @@ display:none;
 .greenFeature{
 	background-color:#36636F;
 	color:#FFF;
-	margin:-152px 0 18px 180px;
+	margin:-152px 0 18px 200px;
 	padding:10px 30px 10px 50px;
 	font-weight:bold;
 	font-style:italic;
 }
 .paragraph-area{
-   margin: 0 30px 0 220px;
-   overflow: scroll;
+   margin: 0 5px 0 220px;
+   overflow: auto;
+   overflow-x: hidden;
+   position: relative;
    height: 380px;
 }
 .parens a{
@@ -206,6 +251,11 @@ nav{
 	background-position:0 -41px;
 }
 
+#topNav .top_nav_selected{
+   background-position:0 -41px; 
+}
+
+
 /*Code for text-based topNav buttons:
 #topNav a{
 	color:white;
@@ -277,6 +327,11 @@ nav{
 	margin-bottom:20px;
 	position:relative;/*In relation to page numbers*/
 }
+
+#contentArea a.intro-back{
+  margin-bottom: -10px;  
+}
+
 #SummariesPageLeftColumn{
 	margin:0;
 	padding:0;
@@ -313,6 +368,10 @@ ul.sideNav {
 	position:relative;
 }
 
+.ie7 .sideNav li{
+    margin:-7px 0 0 -12px;
+}
+
 /*
 .sideNav li a img{
 	width:15px;
@@ -323,6 +382,8 @@ ul.sideNav {
 .sideNav li a img{
   /* width:35px;*/
    height:auto;
+   outline:none; 
+   border: 0;
 }
 
 
@@ -361,6 +422,12 @@ ul.sideNav {
 #sideNav #tab1.selectedTab a{
 	background-color:red;
 }*/
+
+.sideNav selectedTab{
+   border: 0;
+   outline: none;
+}
+
 .sideNav a:hover {
 	opacity:0.6;
 	filter:alpha(opacity=60); /* For IE8 and earlier */		
@@ -461,14 +528,14 @@ ul.sideNav {
 	display:block; 
 	border-left: none 1px black; 
 	margin:0 0 0 240px; 
-	padding: 0 25px 0 20px; 
+	padding: 0 5px 0 20px; 
 	float:left; 
 	background-color:none;
-	width:630px;
-	overflow-y:hidden;
-	overflow-x:hidden;
+	width:660px;	
 	height: 480px;
-        overflow: scroll; 
+        overflow: auto;
+        overflow-x: hidden;
+        position: relative;     
 }
 
 #large-data {
@@ -495,6 +562,21 @@ ul.sideNav {
 	opacity:0.5;
 	filter:alpha(opacity=50); /* For IE8 and earlier */
 }
+
+
+.paraZone .zone-image{
+  width:102px;
+  padding-right: 5px;
+  float:left;  
+}
+
+.paraZone .zone-contents{
+  float:left;
+  width: 530px;
+}
+
+
+
 .ReadMore a{
 	color:#74408A;
 	font-style:italic;
@@ -629,3 +711,240 @@ img.squareLarge{
     left: 50%;
     margin: -20% 0 0 -40px;
 } */
+
+
+/* For basics*/
+
+.BasicsCenteringDiv{
+	width:815px;
+	margin:90px auto;
+	text-align: center;
+}
+.centeringDiv img{
+	margin-bottom:30px;
+}
+
+.higher{
+	margin-top:30px;
+}
+.BasicsIntroButtons ul{
+	text-align:center;/*not in use*/
+	margin: 0 auto;/*might work. check once images are cropped to same width*/
+}
+.BasicsIntroButtons li a{
+	float:left;
+	margin:0 60px;
+}
+.BasicsIntroButtons li a:hover{
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */		
+}
+
+/* End for basics */
+
+
+/*For pharmacy services */
+
+
+.PharmCenteringDiv{
+	width:900px;
+	margin:25px auto;
+	text-align:center;
+}
+
+.PharmIntroButtons li {
+	display:inline; /* Prevents "stepdown" noticeable in IE7*/
+}
+
+.PharmIntroButtons li a{
+	float:left;
+	margin:0;
+}
+.PharmIntroButtons li a:hover{
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */		
+}
+.pharmTopButtons{
+	width:590px;
+	height:250px;
+	margin:0 auto;
+}
+.pharmTopButtons li a{
+	margin:0 55px;
+}
+.pharmBottomButtons{
+	width:880px;
+    	margin:10px auto;
+}
+.pharmBottomButtons li a{
+	margin:0 55px;
+}
+
+/*End for pharmacy services*/
+
+
+
+/*for featured product */
+#hidden-data{
+   display: none; 
+}
+
+
+#product-listing{
+		margin-top: 20px;
+		width:930px;
+		position: relative;
+		overflow: hidden;
+}
+#product-listing ul {
+        width:2700px;
+}
+.product {
+        width:170px;
+        height: 220px;
+        float:left; 
+        display: inline-block;
+        margin:0px 20px;
+        cursor: pointer;
+}
+.product-copy {
+        text-align: center;
+        padding:10px 10px;
+        font-size: 12px; 
+}
+.product-copy .title {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-weight: bold; 
+}
+.scroll-more {
+        width: 100%;
+        background-color: #36636f;
+        height:20px;
+        margin-top:4px;
+}
+
+
+
+/* Styles specific to this particular page */
+.scroll-pane {
+        width: 100%;
+        height: 495px;
+        overflow: auto;
+}
+.horizontal-only {
+        height: auto;
+        max-height: 200px;
+}
+
+#product_contents{
+  display: none;  
+}
+.product-go-back{
+   text-align: left;
+   padding-left: 10px;
+   clear: both; 
+   height: 40px;
+}
+
+.product-detail {
+        width:755px;
+        margin: auto;
+        margin-top:30px;
+}
+.detail-image {
+        width:290px;
+        height:220px;
+        float: left;
+        margin-right:15px;
+}
+.detailed-info {
+        width:450px;
+        float: left;
+}
+.detailed-info .title {
+        border-bottom: 1px solid #000;
+        font-weight: bold;
+        width: 100%;
+        margin-bottom: 10px;
+}
+.detailed-info .category {
+        border-bottom: 1px solid #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 100%;
+        font-size: 10px;
+        margin-bottom: 10px;
+}
+.detailed-info .description {
+        width:100%;
+}
+
+.detailed-info .title p, .detailed-info .category p {
+        margin-bottom: 0px;
+}
+
+.products-footer {
+        clear: both;
+        height:160px;
+       /* margin-top:354px;*/
+}
+
+.related-products3up {
+        height:140px;
+        width:840px;
+        margin:auto;
+}
+
+.related-products2up {
+        height:140px;
+        width:575px;
+        margin:auto;
+}
+
+.rel-product {
+        margin:15px;
+        float:left;
+        width:250px;
+        cursor: pointer;
+}
+
+.rel-product-img {
+        width: 120px;
+        height:92px;
+        float: left;
+        margin-right:15px;
+        background-color:red; 
+}
+
+.rel-product-text {
+        float: left;
+        width:100px;
+}
+
+.rel-product .category {
+        border-bottom: 1px solid #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 100%;
+        font-size: 10px;
+        margin-bottom: 10px;
+}
+.rel-product .name {
+        width:100%;
+}
+
+.rel-product .title p, .rel-product .category p {
+        margin-bottom: 0px;
+}
+        
+
+/*end for featured product*/
+
+h1{
+   line-height:20px;
+}
+
+.greenFeature{
+   margin:-152px 0 18px 180px;
+}

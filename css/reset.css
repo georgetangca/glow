@@ -43,3 +43,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a {outline : none;}
+a img {outline : none;}
+img {border : 0;}
+
+a:active, a:selected, a:visited { 
+    border: none;
+    outline: none;
+}
