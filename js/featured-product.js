@@ -1,9 +1,29 @@
+
 jQuery(document).ready(function ($) {
-   $("#product_small").load("featured-products-items.html");
-   $("#product-large").load("product-details.html");
-  // $("div#product-listing").load("product-list.html");
+   var host_home_url = config.host; 
    
-   $('.scroll-pane').jScrollPane();
+   function clean_image_src(div_id){
+     $('#'+div_id+" img").each(function(i, obj) {
+               image_src   = $(this).attr('src');
+               img_src_arr = image_src.split('images');
+               image_src = host_home_url+'images'+ img_src_arr[1];
+               $("#"+div_id+" img:eq("+i+")").attr("src",image_src);
+     });             
+   }
+   
+   $("#product_small").load(host_home_url+"featured-products/featured-products-items.html" ,function(){
+       clean_image_src("product_small");
+   });
+   $("#product-large").load(host_home_url+"featured-products/detail-products-items.html",function(){
+        clean_image_src("product-large");
+   });
+   
+   $("div#product-listing").load(host_home_url+"featured-products/product-list.html",function(result){
+        clean_image_src("product-listing");
+        $('.scroll-pane').jScrollPane();
+   })
+   
+  
    
    $("#product-listing ul li.product, div#product_contents .products-footer .rel-product").live('click',function(){
       $("div#product-listing").hide();
